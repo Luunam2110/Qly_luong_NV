@@ -39,7 +39,7 @@ namespace Qly_luong
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(194, 208);
+            this.btnLogin.Location = new System.Drawing.Point(279, 168);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
             this.btnLogin.TabIndex = 0;
@@ -50,7 +50,7 @@ namespace Qly_luong
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(72, 108);
+            this.label1.Location = new System.Drawing.Point(90, 87);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 1;
@@ -60,7 +60,7 @@ namespace Qly_luong
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(81, 162);
+            this.label2.Location = new System.Drawing.Point(99, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 2;
@@ -68,16 +68,16 @@ namespace Qly_luong
             // 
             // Txtma
             // 
-            this.Txtma.Location = new System.Drawing.Point(194, 105);
+            this.Txtma.Location = new System.Drawing.Point(191, 84);
             this.Txtma.Name = "Txtma";
-            this.Txtma.Size = new System.Drawing.Size(100, 20);
+            this.Txtma.Size = new System.Drawing.Size(176, 20);
             this.Txtma.TabIndex = 3;
             // 
             // txtpass
             // 
-            this.txtpass.Location = new System.Drawing.Point(194, 159);
+            this.txtpass.Location = new System.Drawing.Point(191, 121);
             this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(100, 20);
+            this.txtpass.Size = new System.Drawing.Size(176, 20);
             this.txtpass.TabIndex = 4;
             this.txtpass.UseSystemPasswordChar = true;
             // 
@@ -85,7 +85,8 @@ namespace Qly_luong
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(174, 40);
+            this.label3.ForeColor = System.Drawing.Color.Maroon;
+            this.label3.Location = new System.Drawing.Point(165, 27);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(126, 25);
             this.label3.TabIndex = 5;
@@ -104,6 +105,7 @@ namespace Qly_luong
             this.Controls.Add(this.btnLogin);
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -87,14 +87,16 @@ namespace Qly_luong
             // đôiMâtKhâuToolStripMenuItem
             // 
             this.đôiMâtKhâuToolStripMenuItem.Name = "đôiMâtKhâuToolStripMenuItem";
-            this.đôiMâtKhâuToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.đôiMâtKhâuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.đôiMâtKhâuToolStripMenuItem.Text = "Đổi mật khẩu";
+            this.đôiMâtKhâuToolStripMenuItem.Click += new System.EventHandler(this.đôiMâtKhâuToolStripMenuItem_Click);
             // 
             // đăngXuâtToolStripMenuItem
             // 
             this.đăngXuâtToolStripMenuItem.Name = "đăngXuâtToolStripMenuItem";
-            this.đăngXuâtToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.đăngXuâtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.đăngXuâtToolStripMenuItem.Text = "Đăng xuất";
+            this.đăngXuâtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuâtToolStripMenuItem_Click);
             // 
             // lươngToolStripMenuItem
             // 

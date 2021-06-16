@@ -60,14 +60,19 @@ namespace Qly_luong
                         this.Hide();
                         if (table.Rows[0][2].ToString() == "CV001" || table.Rows[0][2].ToString() == "CV002")
                         {
-                            Trangchu tc = new Trangchu(true, table.Rows[0][3].ToString());
+                            Trangchu tc = new Trangchu(true, table.Rows[0][3].ToString(), table.Rows[0][0].ToString());
                             tc.Show();
                         }
 
-                        else { Trangchu tc = new Trangchu(false, table.Rows[0][3].ToString()); tc.Show();  }
+                        else { Trangchu tc = new Trangchu(false, table.Rows[0][3].ToString(), table.Rows[0][0].ToString()); tc.Show();  }
                     }
                 }    
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

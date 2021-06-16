@@ -121,6 +121,9 @@
     <EmbeddedResource Include="ChamCong\DSChamCong.resx">
       <DependentUpon>DSChamCong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DoiMatKhau.resx">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

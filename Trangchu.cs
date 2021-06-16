@@ -14,8 +14,10 @@ namespace Qly_luong
     {
         Boolean quanly;
         string PB;
-        public Trangchu(Boolean qly,String Phongban)
+        string maNV;
+        public Trangchu(Boolean qly,String Phongban,string maNV)
         {
+            this.maNV = maNV;
             this.PB = Phongban;
             this.quanly = qly;
             InitializeComponent();
@@ -57,7 +59,7 @@ namespace Qly_luong
 
         private void thôngTinChâmCôngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ChamCong.DSChamCong f1 = new ChamCong.DSChamCong();
+            ChamCong.DSChamCong f1 = new ChamCong.DSChamCong(PB);
             f1.MdiParent = this;
             f1.Show();
         }
@@ -66,6 +68,20 @@ namespace Qly_luong
         {
             ThuongPhat.ThuongNV f1 = new ThuongPhat.ThuongNV(PB);
             f1.MdiParent = this;
+            f1.Show();
+        }
+
+        private void đôiMâtKhâuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DoiMatKhau f1 = new DoiMatKhau(maNV);
+            f1.MdiParent = this; ;
+            f1.Show();
+        }
+
+        private void đăngXuâtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login f1 = new Login();
             f1.Show();
         }
     }
