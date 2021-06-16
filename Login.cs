@@ -58,9 +58,9 @@ namespace Qly_luong
                     else
                     {
                         this.Hide();
-                        if (table.Rows[0][2].ToString() == "CV001" || table.Rows[0][3].ToString() == "CV002")
+                        if (table.Rows[0][2].ToString() == "CV001" || table.Rows[0][2].ToString() == "CV002")
                         {
-                            Trangchu tc = new Trangchu(true, table.Rows[0][2].ToString());
+                            Trangchu tc = new Trangchu(true, table.Rows[0][3].ToString());
                             tc.Show();
                         }
 

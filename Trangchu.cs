@@ -40,5 +40,12 @@ namespace Qly_luong
             f1.MdiParent = this;
             f1.Show();
         }
+
+        private void checkOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChamCong.CheckOut f1 = new ChamCong.CheckOut(PB);
+            f1.MdiParent = this;
+            f1.Show();
+        }
     }
 }

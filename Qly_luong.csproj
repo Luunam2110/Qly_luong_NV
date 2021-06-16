@@ -67,6 +67,12 @@
     <Compile Include="ChamCong\CheckIn.Designer.cs">
       <DependentUpon>CheckIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChamCong\CheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChamCong\CheckOut.Designer.cs">
+      <DependentUpon>CheckOut.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connectionstring.cs" />
     <Compile Include="DoiMatKhau.cs">
       <SubType>Form</SubType>
@@ -90,6 +96,9 @@
     </Compile>
     <EmbeddedResource Include="ChamCong\CheckIn.resx">
       <DependentUpon>CheckIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChamCong\CheckOut.resx">
+      <DependentUpon>CheckOut.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
