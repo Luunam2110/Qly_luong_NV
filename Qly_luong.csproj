@@ -61,7 +61,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChamCong\CheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChamCong\CheckIn.Designer.cs">
+      <DependentUpon>CheckIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connectionstring.cs" />
+    <Compile Include="DoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoiMatKhau.Designer.cs">
+      <DependentUpon>DoiMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +88,9 @@
     <Compile Include="Trangchu.Designer.cs">
       <DependentUpon>Trangchu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChamCong\CheckIn.resx">
+      <DependentUpon>CheckIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

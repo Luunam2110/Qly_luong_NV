@@ -38,33 +38,35 @@ namespace Qly_luong
             }
             else
             {
-                SqlCommand cmd = new SqlCommand("dangnhap", cnn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ma", Txtma.Text);
-                DataTable table = new DataTable();
-                cnn.Open();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(table);
-                cnn.Close();
-                if (table.Rows.Count == 0)
+                using (SqlCommand cmd = new SqlCommand("dangnhap", cnn))
                 {
-                    MessageBox.Show("sai tên đăng nhập");
-                }
-                else if (table.Rows[0][1].ToString() != txtpass.Text)
-                {
-                    MessageBox.Show("sai mật khẩu");
-                }
-                else
-                {
-                    this.Hide();
-                    if (table.Rows[0][1].ToString() == "CV001" || table.Rows[0][1].ToString() == "CV002")
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@ma", Txtma.Text);
+                    DataTable table = new DataTable();
+                    cnn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(table);
+                    cnn.Close();
+                    if (table.Rows.Count == 0)
                     {
-                        Trangchu tc = new Trangchu(true);
-                        tc.Show();
+                        MessageBox.Show("sai tên đăng nhập");
                     }
+                    else if (table.Rows[0][1].ToString() != txtpass.Text)
+                    {
+                        MessageBox.Show("sai mật khẩu");
+                    }
+                    else
+                    {
+                        this.Hide();
+                        if (table.Rows[0][2].ToString() == "CV001" || table.Rows[0][3].ToString() == "CV002")
+                        {
+                            Trangchu tc = new Trangchu(true, table.Rows[0][2].ToString());
+                            tc.Show();
+                        }
 
-                    else { Trangchu tc = new Trangchu(false); tc.Show(); }
-                }
+                        else { Trangchu tc = new Trangchu(false, table.Rows[0][3].ToString()); tc.Show();  }
+                    }
+                }    
             }
         }
     }
