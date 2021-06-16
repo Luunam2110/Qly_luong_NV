@@ -41,16 +41,16 @@ namespace Qly_luong.ThuongPhat
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.CbbNoidungThuong = new System.Windows.Forms.ComboBox();
             this.txtMucThuong = new System.Windows.Forms.TextBox();
             this.btnThem = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DgvCtthuong = new System.Windows.Forms.DataGridView();
             this.noiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mucThuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
+            this.cbbMucThuong = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgvNhanVien)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvCtthuong)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -109,6 +109,7 @@ namespace Qly_luong.ThuongPhat
             // 
             // txtTenNV
             // 
+            this.txtTenNV.Enabled = false;
             this.txtTenNV.Location = new System.Drawing.Point(117, 94);
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.Size = new System.Drawing.Size(166, 20);
@@ -116,6 +117,7 @@ namespace Qly_luong.ThuongPhat
             // 
             // txtMaNV
             // 
+            this.txtMaNV.Enabled = false;
             this.txtMaNV.Location = new System.Drawing.Point(117, 63);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(166, 20);
@@ -157,16 +159,6 @@ namespace Qly_luong.ThuongPhat
             this.label6.TabIndex = 18;
             this.label6.Text = "Mức thưởng";
             // 
-            // CbbNoidungThuong
-            // 
-            this.CbbNoidungThuong.FormattingEnabled = true;
-            this.CbbNoidungThuong.Location = new System.Drawing.Point(538, 58);
-            this.CbbNoidungThuong.Name = "CbbNoidungThuong";
-            this.CbbNoidungThuong.Size = new System.Drawing.Size(186, 21);
-            this.CbbNoidungThuong.TabIndex = 19;
-            this.CbbNoidungThuong.SelectedIndexChanged += new System.EventHandler(this.CbbNoidungThuong_SelectedIndexChanged);
-            this.CbbNoidungThuong.SelectedValueChanged += new System.EventHandler(this.CbbNoidungThuong_SelectedValueChanged);
-            // 
             // txtMucThuong
             // 
             this.txtMucThuong.Enabled = false;
@@ -184,18 +176,19 @@ namespace Qly_luong.ThuongPhat
             this.btnThem.TabIndex = 21;
             this.btnThem.Text = "Thưởng";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // dataGridView1
+            // DgvCtthuong
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DgvCtthuong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvCtthuong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.noiDung,
             this.mucThuong,
             this.soLan});
-            this.dataGridView1.Location = new System.Drawing.Point(393, 192);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(395, 246);
-            this.dataGridView1.TabIndex = 22;
+            this.DgvCtthuong.Location = new System.Drawing.Point(393, 192);
+            this.DgvCtthuong.Name = "DgvCtthuong";
+            this.DgvCtthuong.Size = new System.Drawing.Size(395, 246);
+            this.DgvCtthuong.TabIndex = 22;
             // 
             // noiDung
             // 
@@ -221,20 +214,29 @@ namespace Qly_luong.ThuongPhat
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(404, 162);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(170, 13);
+            this.label7.Size = new System.Drawing.Size(227, 13);
             this.label7.TabIndex = 23;
-            this.label7.Text = "Danh sách Thưởng của nhân viên";
+            this.label7.Text = "Danh sách Thưởng của nhân viên trong tháng";
+            // 
+            // cbbMucThuong
+            // 
+            this.cbbMucThuong.FormattingEnabled = true;
+            this.cbbMucThuong.Location = new System.Drawing.Point(538, 58);
+            this.cbbMucThuong.Name = "cbbMucThuong";
+            this.cbbMucThuong.Size = new System.Drawing.Size(186, 21);
+            this.cbbMucThuong.TabIndex = 24;
+            this.cbbMucThuong.SelectedValueChanged += new System.EventHandler(this.CbbNoidungThuong_SelectedValueChanged);
             // 
             // ThuongNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbbMucThuong);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DgvCtthuong);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.txtMucThuong);
-            this.Controls.Add(this.CbbNoidungThuong);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtTenNV);
@@ -248,7 +250,7 @@ namespace Qly_luong.ThuongPhat
             this.Text = "ThuongNV";
             this.Load += new System.EventHandler(this.ThuongNV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvNhanVien)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvCtthuong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,13 +270,13 @@ namespace Qly_luong.ThuongPhat
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox CbbNoidungThuong;
         private System.Windows.Forms.TextBox txtMucThuong;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DgvCtthuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn noiDung;
         private System.Windows.Forms.DataGridViewTextBoxColumn mucThuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn soLan;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cbbMucThuong;
     }
 }
