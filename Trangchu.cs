@@ -54,5 +54,19 @@ namespace Qly_luong
             f1.MdiParent = this;
             f1.Show();
         }
+
+        private void thôngTinChâmCôngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChamCong.DSChamCong f1 = new ChamCong.DSChamCong();
+            f1.MdiParent = this;
+            f1.Show();
+        }
+
+        private void thươngNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThuongPhat.ThuongNV f1 = new ThuongPhat.ThuongNV(PB);
+            f1.MdiParent = this;
+            f1.Show();
+        }
     }
 }

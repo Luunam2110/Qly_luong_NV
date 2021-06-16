@@ -73,6 +73,12 @@
     <Compile Include="ChamCong\CheckOut.Designer.cs">
       <DependentUpon>CheckOut.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChamCong\DSChamCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChamCong\DSChamCong.designer.cs">
+      <DependentUpon>DSChamCong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connectionstring.cs" />
     <Compile Include="DoiMatKhau.cs">
       <SubType>Form</SubType>
@@ -94,6 +100,12 @@
     <Compile Include="ThuongPhat\ThemThuong.Designer.cs">
       <DependentUpon>ThemThuong.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThuongPhat\ThuongNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThuongPhat\ThuongNV.Designer.cs">
+      <DependentUpon>ThuongNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Trangchu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChamCong\CheckOut.resx">
       <DependentUpon>CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChamCong\DSChamCong.resx">
+      <DependentUpon>DSChamCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -120,6 +135,9 @@
     </Compile>
     <EmbeddedResource Include="ThuongPhat\ThemThuong.resx">
       <DependentUpon>ThemThuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThuongPhat\ThuongNV.resx">
+      <DependentUpon>ThuongNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Trangchu.resx">
       <DependentUpon>Trangchu.cs</DependentUpon>

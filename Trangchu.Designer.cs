@@ -127,6 +127,7 @@ namespace Qly_luong
             this.thươngNhânViênToolStripMenuItem.Name = "thươngNhânViênToolStripMenuItem";
             this.thươngNhânViênToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.thươngNhânViênToolStripMenuItem.Text = "Thưởng nhân viên";
+            this.thươngNhânViênToolStripMenuItem.Click += new System.EventHandler(this.thươngNhânViênToolStripMenuItem_Click);
             // 
             // phatNhânViênToolStripMenuItem
             // 
@@ -192,6 +193,7 @@ namespace Qly_luong
             this.thôngTinChâmCôngToolStripMenuItem.Name = "thôngTinChâmCôngToolStripMenuItem";
             this.thôngTinChâmCôngToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.thôngTinChâmCôngToolStripMenuItem.Text = "Thông tin chấm công";
+            this.thôngTinChâmCôngToolStripMenuItem.Click += new System.EventHandler(this.thôngTinChâmCôngToolStripMenuItem_Click);
             // 
             // lươngToolStripMenuItem1
             // 
