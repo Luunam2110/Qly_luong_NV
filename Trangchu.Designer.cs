@@ -45,12 +45,12 @@ namespace Qly_luong
             this.hôSơCaNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.châmCôngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Itemmenu1_Chamcong = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinChâmCôngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lươngToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.danhSachPhiêuLươngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Itemmenu1_Luong = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,6 +114,7 @@ namespace Qly_luong
             this.thươngToolStripMenuItem.Name = "thươngToolStripMenuItem";
             this.thươngToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.thươngToolStripMenuItem.Text = "Thêm thưởng";
+            this.thươngToolStripMenuItem.Click += new System.EventHandler(this.thươngToolStripMenuItem_Click);
             // 
             // phatToolStripMenuItem
             // 
@@ -172,6 +173,20 @@ namespace Qly_luong
             this.Itemmenu1_Chamcong.Size = new System.Drawing.Size(188, 22);
             this.Itemmenu1_Chamcong.Text = "Chấm công";
             // 
+            // checkinToolStripMenuItem
+            // 
+            this.checkinToolStripMenuItem.Name = "checkinToolStripMenuItem";
+            this.checkinToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.checkinToolStripMenuItem.Text = "Check in";
+            this.checkinToolStripMenuItem.Click += new System.EventHandler(this.checkinToolStripMenuItem_Click);
+            // 
+            // checkOutToolStripMenuItem
+            // 
+            this.checkOutToolStripMenuItem.Name = "checkOutToolStripMenuItem";
+            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.checkOutToolStripMenuItem.Text = "Check out";
+            this.checkOutToolStripMenuItem.Click += new System.EventHandler(this.checkOutToolStripMenuItem_Click);
+            // 
             // thôngTinChâmCôngToolStripMenuItem
             // 
             this.thôngTinChâmCôngToolStripMenuItem.Name = "thôngTinChâmCôngToolStripMenuItem";
@@ -198,20 +213,6 @@ namespace Qly_luong
             this.Itemmenu1_Luong.Name = "Itemmenu1_Luong";
             this.Itemmenu1_Luong.Size = new System.Drawing.Size(196, 22);
             this.Itemmenu1_Luong.Text = "Lập phiếu lương";
-            // 
-            // checkinToolStripMenuItem
-            // 
-            this.checkinToolStripMenuItem.Name = "checkinToolStripMenuItem";
-            this.checkinToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.checkinToolStripMenuItem.Text = "Check in";
-            this.checkinToolStripMenuItem.Click += new System.EventHandler(this.checkinToolStripMenuItem_Click);
-            // 
-            // checkOutToolStripMenuItem
-            // 
-            this.checkOutToolStripMenuItem.Name = "checkOutToolStripMenuItem";
-            this.checkOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.checkOutToolStripMenuItem.Text = "Check out";
-            this.checkOutToolStripMenuItem.Click += new System.EventHandler(this.checkOutToolStripMenuItem_Click);
             // 
             // Trangchu
             // 

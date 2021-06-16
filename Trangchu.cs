@@ -47,5 +47,12 @@ namespace Qly_luong
             f1.MdiParent = this;
             f1.Show();
         }
+
+        private void thươngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThuongPhat.ThemThuong f1 = new ThuongPhat.ThemThuong();
+            f1.MdiParent = this;
+            f1.Show();
+        }
     }
 }
