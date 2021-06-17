@@ -91,5 +91,12 @@ namespace Qly_luong
             f1.MdiParent = this;
             f1.Show();
         }
+
+        private void phatNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThuongPhat.PhatNV f1 = new ThuongPhat.PhatNV(PB);
+            f1.MdiParent = this;
+            f1.Show();
+        }
     }
 }

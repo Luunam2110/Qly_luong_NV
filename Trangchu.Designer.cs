@@ -87,14 +87,14 @@ namespace Qly_luong
             // đôiMâtKhâuToolStripMenuItem
             // 
             this.đôiMâtKhâuToolStripMenuItem.Name = "đôiMâtKhâuToolStripMenuItem";
-            this.đôiMâtKhâuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đôiMâtKhâuToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.đôiMâtKhâuToolStripMenuItem.Text = "Đổi mật khẩu";
             this.đôiMâtKhâuToolStripMenuItem.Click += new System.EventHandler(this.đôiMâtKhâuToolStripMenuItem_Click);
             // 
             // đăngXuâtToolStripMenuItem
             // 
             this.đăngXuâtToolStripMenuItem.Name = "đăngXuâtToolStripMenuItem";
-            this.đăngXuâtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đăngXuâtToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.đăngXuâtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuâtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuâtToolStripMenuItem_Click);
             // 
@@ -137,6 +137,7 @@ namespace Qly_luong
             this.phatNhânViênToolStripMenuItem.Name = "phatNhânViênToolStripMenuItem";
             this.phatNhânViênToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.phatNhânViênToolStripMenuItem.Text = "Phạt nhân viên";
+            this.phatNhânViênToolStripMenuItem.Click += new System.EventHandler(this.phatNhânViênToolStripMenuItem_Click);
             // 
             // thươngPhatCaNhânToolStripMenuItem
             // 

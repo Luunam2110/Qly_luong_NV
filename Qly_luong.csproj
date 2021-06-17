@@ -106,6 +106,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThuongPhat\PhatNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThuongPhat\PhatNV.Designer.cs">
+      <DependentUpon>PhatNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThuongPhat\ThemPhat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ThuongPhat\PhatNV.resx">
+      <DependentUpon>PhatNV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThuongPhat\ThemPhat.resx">
       <DependentUpon>ThemPhat.cs</DependentUpon>
     </EmbeddedResource>

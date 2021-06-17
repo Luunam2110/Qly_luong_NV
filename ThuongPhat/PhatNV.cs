@@ -11,19 +11,19 @@ using System.Windows.Forms;
 
 namespace Qly_luong.ThuongPhat
 {
-    public partial class ThuongNV : Form
+    public partial class PhatNV : Form
     {
         string PB;
         SqlConnection cnn = new SqlConnection(Connectionstring.connectionstring);
-        public ThuongNV(string Phongban)
+        public PhatNV(string Phongban)
         {
             this.PB = Phongban;
             InitializeComponent();
         }
-        private int getmaPT(string maNV)
+        private int getmaPP(string maNV)
         {
-            DataTable TablegetmaPT = new DataTable();
-            using (SqlCommand cmd = new SqlCommand("TimPhieuThuong", cnn))
+            DataTable TablegetmaPP = new DataTable();
+            using (SqlCommand cmd = new SqlCommand("TimPhieuPhat", cnn))
             {
 
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -32,15 +32,15 @@ namespace Qly_luong.ThuongPhat
                 cmd.Parameters.AddWithValue("@nam", DateTime.Now.Year);
                 cnn.Open();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(TablegetmaPT);
-                cnn.Close(); 
-                return Convert.ToInt32(TablegetmaPT.Rows[0][0].ToString());
+                da.Fill(TablegetmaPP);
+                cnn.Close();
+                return Convert.ToInt32(TablegetmaPP.Rows[0][0].ToString());
             }
         }
-        private void loadDSThuong(string maNV)
+        private void loadDSPhat(string maNV)
         {
             DataTable table = new DataTable();
-            string query = "select noiDung,mucThuong,soLan from tblCTPhieuThuong, tblThuong where tblCTPhieuThuong.maThuong = tblThuong.maThuong and tblCTPhieuThuong.maPT= " + getmaPT(maNV) + "";
+            string query = "select noiDung,mucPhat,soLan from tblCTPhieuPhat, tblPhat where tblCTPhieuPhat.maPhat = tblPhat.maPhat and tblCTPhieuPhat.maPP= " + getmaPP(maNV) + "";
             using (SqlCommand cmd = new SqlCommand())
             {
                 cmd.CommandText = query;
@@ -49,7 +49,7 @@ namespace Qly_luong.ThuongPhat
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(table);
                 cnn.Close();
-                DgvCtthuong.DataSource = table;
+                DgvCtphat.DataSource = table;
             }
         }
         private void DgvNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -60,16 +60,15 @@ namespace Qly_luong.ThuongPhat
                 txtMaNV.Text = DgvNhanVien.Rows[i].Cells["maNhanvien"].Value.ToString();
                 txtTenNV.Text = DgvNhanVien.Rows[i].Cells["tenNV"].Value.ToString();
                 btnThem.Enabled = true;
-                loadDSThuong(DgvNhanVien.Rows[i].Cells["maNhanvien"].Value.ToString());
-                
+                loadDSPhat(DgvNhanVien.Rows[i].Cells["maNhanvien"].Value.ToString());
+
             }
             catch { }
-            
         }
-        void LoadThuong()
+        void LoadPhat()
         {
-            string query = "select maThuong, noiDung,mucThuong from tblThuong";
-            using (SqlCommand cmd  =new SqlCommand())
+            string query = "select maPhat, noiDung,mucPhat from tblPhat";
+            using (SqlCommand cmd = new SqlCommand())
             {
                 cmd.Connection = cnn;
                 cmd.CommandText = query;
@@ -78,17 +77,17 @@ namespace Qly_luong.ThuongPhat
                 cnn.Open();
                 try
                 {
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);    
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
                     da.Fill(table);
                 }
                 catch
                 {
-                    MessageBox.Show("Lỗi Sql load thuong!");
+                    MessageBox.Show("Lỗi Sql load phat!");
                 }
                 finally { cnn.Close(); }
-                cbbMucThuong.DataSource = table;
-                cbbMucThuong.DisplayMember = table.Columns["noiDung"].ToString();
-                cbbMucThuong.ValueMember = table.Columns["maThuong"].ToString();
+                cbbMucPhat.DataSource = table;
+                cbbMucPhat.DisplayMember = table.Columns["noiDung"].ToString();
+                cbbMucPhat.ValueMember = table.Columns["maPhat"].ToString();
             }
         }
 
@@ -124,20 +123,20 @@ namespace Qly_luong.ThuongPhat
                 DgvNhanVien.Columns["gioiTinh"].Visible = false;
             }
         }
-        private void CbbNoidungThuong_SelectedIndexChanged(object sender, EventArgs e)
+        private void CbbNoidungPhat_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
-        private void ThuongNV_Load(object sender, EventArgs e)
+        private void PhatNV_Load(object sender, EventArgs e)
         {
-            LoadThuong();
+            LoadPhat();
             btnThem.Enabled = false;
             LoadListNhanVien();
         }
-        
-        private void CbbNoidungThuong_SelectedValueChanged(object sender, EventArgs e)
+
+        private void CbbNoidungPhat_SelectedValueChanged(object sender, EventArgs e)
         {
-            string query = "select mucThuong from tblThuong where maThuong = '" + cbbMucThuong.SelectedValue.ToString() + "'";
+            string query = "select mucPhat from tblPhat where maPhat = '" + cbbMucPhat.SelectedValue.ToString() + "'";
             using (SqlCommand cmd = new SqlCommand())
             {
                 cmd.Connection = cnn;
@@ -148,38 +147,38 @@ namespace Qly_luong.ThuongPhat
                 {
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     da.Fill(table);
-                    txtMucThuong.Text = table.Rows[0][0].ToString();
+                    txtMucPhat.Text = table.Rows[0][0].ToString();
                 }
 
                 catch { }
                 finally { cnn.Close(); }
-                  
-                    
+
+
             }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            using (SqlCommand cmd = new SqlCommand("thuong", cnn))
+            using (SqlCommand cmd = new SqlCommand("phat", cnn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@maNV", txtMaNV.Text);
-                cmd.Parameters.AddWithValue("@mathuong", cbbMucThuong.SelectedValue.ToString());
+                cmd.Parameters.AddWithValue("@maphat", cbbMucPhat.SelectedValue.ToString());
                 cmd.Parameters.AddWithValue("@thang", DateTime.Now.Month);
                 cmd.Parameters.AddWithValue("@nam", DateTime.Now.Year);
-                if ( cnn.State== ConnectionState.Closed)cnn.Open();
+                if (cnn.State == ConnectionState.Closed) cnn.Open();
                 try
                 {
                     cmd.ExecuteNonQuery();
                 }
                 catch
                 {
-                    MessageBox.Show("Đã có lỗi  sảy ra");
+                    MessageBox.Show("Đã có lỗi  xảy ra");
                 }
                 finally { cnn.Close(); }
-                
+
             }
-            loadDSThuong(txtMaNV.Text);
+            loadDSPhat(txtMaNV.Text);
         }
     }
 }
