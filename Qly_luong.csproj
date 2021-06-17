@@ -113,7 +113,7 @@
     <Compile Include="NhanVien\Hosocanhan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhanVien\Hosocanhan.Designer.cs">
+    <Compile Include="NhanVien\Hosocanhan.designer.cs">
       <DependentUpon>Hosocanhan.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />

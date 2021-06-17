@@ -136,5 +136,19 @@ namespace Qly_luong
         {
 
         }
+
+        private void hôSơCaNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NhanVien.Hosocanhan f1 = new NhanVien.Hosocanhan(PB);
+            f1.MdiParent = this;
+            f1.Show();
+        }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NhanVien.Hosocanhan f1 = new NhanVien.Hosocanhan(PB);
+            f1.MdiParent = this;
+            f1.Show();
+        }
     }
 }
