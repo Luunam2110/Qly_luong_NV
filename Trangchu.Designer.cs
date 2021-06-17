@@ -123,6 +123,7 @@ namespace Qly_luong
             this.phatToolStripMenuItem.Name = "phatToolStripMenuItem";
             this.phatToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.phatToolStripMenuItem.Text = "Thêm phạt";
+            this.phatToolStripMenuItem.Click += new System.EventHandler(this.phatToolStripMenuItem_Click);
             // 
             // thươngNhânViênToolStripMenuItem
             // 

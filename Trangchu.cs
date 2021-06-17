@@ -84,5 +84,12 @@ namespace Qly_luong
             Login f1 = new Login();
             f1.Show();
         }
+
+        private void phatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThuongPhat.ThemPhat f1 = new ThuongPhat.ThemPhat();
+            f1.MdiParent = this;
+            f1.Show();
+        }
     }
 }
