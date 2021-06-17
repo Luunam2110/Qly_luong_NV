@@ -26,9 +26,14 @@ namespace Qly_luong
         {
             if (quanly== false)
             {
+                Item1_ThuongPhat.Visible = false;
+                Item2_ThuongPhat.Visible = false;
+                Item3_ThuongPhat.Visible = false;
+                Item4_ThuongPhat.Visible = false;
                 Itemmenu1_Luong.Visible = false;
                 Itemmenu1_Chamcong.Visible = false;
                 ItemMenu1_NhanVien.Visible = false;
+                Itemmenu2_Luong.Visible = false;
             }
         }
         private void Trangchu_Load(object sender, EventArgs e)
@@ -118,6 +123,18 @@ namespace Qly_luong
             Luong.LapPhieuLuong f1 = new Luong.LapPhieuLuong(PB);
             f1.MdiParent = this;
             f1.Show();
+        }
+
+        private void thươngPhatCaNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThuongPhat.ThuongPhatCaNhan f1 = new ThuongPhat.ThuongPhatCaNhan(maNV);
+            f1.MdiParent = this;
+            f1.Show();
+        }
+
+        private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
