@@ -95,8 +95,8 @@ namespace Qly_luong.Luong
                 }
                 finally { cnn.Close(); }
                 DgvNhanVien.DataSource = table;
-                DgvNhanVien.Columns["maPB"].Visible = false;
-                DgvNhanVien.Columns["maCV"].Visible = false;
+                DgvNhanVien.Columns["tenPB"].Visible = false;
+                DgvNhanVien.Columns["tenCV"].Visible = false;
                 DgvNhanVien.Columns["SDT"].Visible = false;
                 DgvNhanVien.Columns["diaChi"].Visible = false;
                 DgvNhanVien.Columns["gioiTinh"].Visible = false;

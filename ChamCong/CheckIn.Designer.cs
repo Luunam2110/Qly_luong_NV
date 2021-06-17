@@ -35,6 +35,9 @@ namespace Qly_luong.ChamCong
             this.txtTenNV = new System.Windows.Forms.TextBox();
             this.BtnCheckIn = new System.Windows.Forms.Button();
             this.DgvNhanVien = new System.Windows.Forms.DataGridView();
+            this.maNhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CBNgayLe = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvListCheckout = new System.Windows.Forms.DataGridView();
@@ -47,9 +50,6 @@ namespace Qly_luong.ChamCong
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.DtpIn = new System.Windows.Forms.DateTimePicker();
-            this.maNhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListCheckout)).BeginInit();
             this.SuspendLayout();
@@ -108,6 +108,27 @@ namespace Qly_luong.ChamCong
             this.DgvNhanVien.Size = new System.Drawing.Size(367, 364);
             this.DgvNhanVien.TabIndex = 5;
             this.DgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvNhanVien_CellClick);
+            // 
+            // maNhanvien
+            // 
+            this.maNhanvien.DataPropertyName = "maNV";
+            this.maNhanvien.HeaderText = "Mã NV";
+            this.maNhanvien.Name = "maNhanvien";
+            this.maNhanvien.Width = 80;
+            // 
+            // tenNV
+            // 
+            this.tenNV.DataPropertyName = "hoTen";
+            this.tenNV.HeaderText = "Họ Tên";
+            this.tenNV.Name = "tenNV";
+            this.tenNV.Width = 120;
+            // 
+            // ngaySinh
+            // 
+            this.ngaySinh.DataPropertyName = "ngaySinh";
+            this.ngaySinh.HeaderText = "Ngày sinh";
+            this.ngaySinh.Name = "ngaySinh";
+            this.ngaySinh.Width = 120;
             // 
             // CBNgayLe
             // 
@@ -214,27 +235,6 @@ namespace Qly_luong.ChamCong
             this.DtpIn.Size = new System.Drawing.Size(94, 20);
             this.DtpIn.TabIndex = 13;
             // 
-            // maNhanvien
-            // 
-            this.maNhanvien.DataPropertyName = "maNV";
-            this.maNhanvien.HeaderText = "Mã NV";
-            this.maNhanvien.Name = "maNhanvien";
-            this.maNhanvien.Width = 80;
-            // 
-            // tenNV
-            // 
-            this.tenNV.DataPropertyName = "hoTen";
-            this.tenNV.HeaderText = "Họ Tên";
-            this.tenNV.Name = "tenNV";
-            this.tenNV.Width = 120;
-            // 
-            // ngaySinh
-            // 
-            this.ngaySinh.DataPropertyName = "ngaySinh";
-            this.ngaySinh.HeaderText = "Ngày sinh";
-            this.ngaySinh.Name = "ngaySinh";
-            this.ngaySinh.Width = 120;
-            // 
             // CheckIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,7 +254,7 @@ namespace Qly_luong.ChamCong
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "CheckIn";
-            this.Text = "CheckIn";
+            this.Text = "7";
             this.Load += new System.EventHandler(this.CheckIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvNhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListCheckout)).EndInit();
