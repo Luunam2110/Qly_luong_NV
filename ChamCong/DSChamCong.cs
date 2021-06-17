@@ -15,9 +15,13 @@ namespace Qly_luong.ChamCong
     {
         SqlConnection cnn = new SqlConnection(Connectionstring.connectionstring);
         private string Pb;
-        public DSChamCong(string Pb)
+        Boolean qly;
+        string manv;
+        public DSChamCong(string Pb,Boolean quanly, string maNV)
         {
             this.Pb = Pb;
+            this.qly = quanly;
+            this.manv = maNV;
             InitializeComponent();
         }
         private void LoadDS(int thang, int nam)
@@ -52,14 +56,14 @@ namespace Qly_luong.ChamCong
                 else row.Cells["ngayLe"].Value = "False";
             }
         }
-        private void LoadChamCongNhanVien(int thang,int nam)
+        private void LoadChamCongNhanVien(int thang,int nam,string manv)
         {
             DataTable table = new DataTable();
             using (SqlCommand cmd = new SqlCommand("Timchamcong", cnn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@pb", Pb);
-                cmd.Parameters.AddWithValue("@maNV", txtMaNV.Text); 
+                cmd.Parameters.AddWithValue("@maNV", manv); 
                 cmd.Parameters.AddWithValue("@thang", thang);
                 cmd.Parameters.AddWithValue("@nam", nam);
                 cnn.Open();
@@ -104,19 +108,23 @@ namespace Qly_luong.ChamCong
             {
                 MessageBox.Show("Nhập năm!");
             }
-            else if (!checkBox1.Checked)
+            else if (!checkBox1.Checked && qly)
                 LoadDS(Convert.ToInt32(cbbThang.SelectedItem), Convert.ToInt32(txtnam.Text));
-            else if (txtMaNV.Text.ToString().Trim() == "")
+            else if (txtMaNV.Text.ToString().Trim() == "" && qly)
                 MessageBox.Show("Nhập mã nhân viên");
-            else LoadChamCongNhanVien(Convert.ToInt32(cbbThang.SelectedItem), Convert.ToInt32(txtnam.Text));
+            else if (qly)
+                LoadChamCongNhanVien(Convert.ToInt32(cbbThang.SelectedItem), Convert.ToInt32(txtnam.Text), txtMaNV.Text); 
+            else
+                LoadChamCongNhanVien(Convert.ToInt32(cbbThang.SelectedItem), Convert.ToInt32(txtnam.Text), this.manv);
 
         }
 
         private void DSChamCong_Load(object sender, EventArgs e)
         {
-            LoadDS(DateTime.Now.Month, DateTime.Now.Year);
+            LoadChamCongNhanVien(DateTime.Now.Month, DateTime.Now.Year,manv);
             cbbThang.Text = Convert.ToString(DateTime.Now.Month);
             txtnam.Text =Convert.ToString( DateTime.Now.Year);
+            groupBox2.Enabled = false;
         }
     }
 }

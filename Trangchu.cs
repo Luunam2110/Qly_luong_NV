@@ -59,7 +59,7 @@ namespace Qly_luong
 
         private void thôngTinChâmCôngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ChamCong.DSChamCong f1 = new ChamCong.DSChamCong(PB);
+            ChamCong.DSChamCong f1 = new ChamCong.DSChamCong(PB, quanly, maNV);
             f1.MdiParent = this;
             f1.Show();
         }
