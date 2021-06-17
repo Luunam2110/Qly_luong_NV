@@ -34,13 +34,17 @@ namespace Qly_luong.ThuongPhat
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(TablegetmaPP);
                 cnn.Close();
+                if (TablegetmaPP.Rows.Count == 0)
+                    return -1;
+                else
                 return Convert.ToInt32(TablegetmaPP.Rows[0][0].ToString());
             }
         }
         private void loadDSPhat(string maNV)
         {
+            int maPhat = getmaPP(maNV);
             DataTable table = new DataTable();
-            string query = "select noiDung,mucPhat,soLan from tblCTPhieuPhat, tblPhat where tblCTPhieuPhat.maPhat = tblPhat.maPhat and tblCTPhieuPhat.maPP= " + getmaPP(maNV) + "";
+            string query = "select noiDung,mucPhat,soLan from tblCTPhieuPhat, tblPhat where tblCTPhieuPhat.maPhat = tblPhat.maPhat and tblCTPhieuPhat.maPP= " + maPhat + "";
             using (SqlCommand cmd = new SqlCommand())
             {
                 cmd.CommandText = query;

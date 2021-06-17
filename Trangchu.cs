@@ -98,5 +98,19 @@ namespace Qly_luong
             f1.MdiParent = this;
             f1.Show();
         }
+
+        private void danhSachPhiêuLươngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Luong.DSPhieuLuong f1 = new Luong.DSPhieuLuong(PB);
+            f1.MdiParent = this;
+            f1.Show();
+        }
+
+        private void phiêuLươngCaNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Luong.PhieuLuongCaNhan f1 = new Luong.PhieuLuongCaNhan(maNV,PB);
+            f1.MdiParent = this;
+            f1.Show();
+        }
     }
 }

@@ -124,7 +124,6 @@ namespace Qly_luong.ChamCong
             LoadChamCongNhanVien(DateTime.Now.Month, DateTime.Now.Year,manv);
             cbbThang.Text = Convert.ToString(DateTime.Now.Month);
             txtnam.Text =Convert.ToString( DateTime.Now.Year);
-            groupBox2.Enabled = false;
         }
     }
 }

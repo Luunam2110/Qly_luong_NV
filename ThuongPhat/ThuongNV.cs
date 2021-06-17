@@ -33,12 +33,15 @@ namespace Qly_luong.ThuongPhat
                 cnn.Open();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(TablegetmaPT);
-                cnn.Close(); 
+                cnn.Close();
+                if (TablegetmaPT.Rows.Count == 0)
+                    return -1;
                 return Convert.ToInt32(TablegetmaPT.Rows[0][0].ToString());
             }
         }
         private void loadDSThuong(string maNV)
         {
+            int mathuong = getmaPT(maNV);
             DataTable table = new DataTable();
             string query = "select noiDung,mucThuong,soLan from tblCTPhieuThuong, tblThuong where tblCTPhieuThuong.maThuong = tblThuong.maThuong and tblCTPhieuThuong.maPT= " + getmaPT(maNV) + "";
             using (SqlCommand cmd = new SqlCommand())
