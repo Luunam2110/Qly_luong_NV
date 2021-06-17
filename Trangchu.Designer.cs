@@ -88,14 +88,14 @@ namespace Qly_luong
             // đôiMâtKhâuToolStripMenuItem
             // 
             this.đôiMâtKhâuToolStripMenuItem.Name = "đôiMâtKhâuToolStripMenuItem";
-            this.đôiMâtKhâuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đôiMâtKhâuToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.đôiMâtKhâuToolStripMenuItem.Text = "Đổi mật khẩu";
             this.đôiMâtKhâuToolStripMenuItem.Click += new System.EventHandler(this.đôiMâtKhâuToolStripMenuItem_Click);
             // 
             // đăngXuâtToolStripMenuItem
             // 
             this.đăngXuâtToolStripMenuItem.Name = "đăngXuâtToolStripMenuItem";
-            this.đăngXuâtToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.đăngXuâtToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.đăngXuâtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuâtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuâtToolStripMenuItem_Click);
             // 
@@ -222,6 +222,7 @@ namespace Qly_luong
             this.Itemmenu1_Luong.Name = "Itemmenu1_Luong";
             this.Itemmenu1_Luong.Size = new System.Drawing.Size(196, 22);
             this.Itemmenu1_Luong.Text = "Lập phiếu lương";
+            this.Itemmenu1_Luong.Click += new System.EventHandler(this.Itemmenu1_Luong_Click);
             // 
             // phiêuLươngCaNhânToolStripMenuItem
             // 

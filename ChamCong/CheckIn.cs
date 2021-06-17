@@ -76,6 +76,7 @@ namespace Qly_luong.ChamCong
                 DgvNhanVien.Columns["SDT"].Visible = false;
                 DgvNhanVien.Columns["diaChi"].Visible = false;
                 DgvNhanVien.Columns["gioiTinh"].Visible = false;
+                DgvNhanVien.Columns["matKhau"].Visible = false;
             }
         }
         private void init()

@@ -112,5 +112,12 @@ namespace Qly_luong
             f1.MdiParent = this;
             f1.Show();
         }
+
+        private void Itemmenu1_Luong_Click(object sender, EventArgs e)
+        {
+            Luong.LapPhieuLuong f1 = new Luong.LapPhieuLuong(PB);
+            f1.MdiParent = this;
+            f1.Show();
+        }
     }
 }

@@ -98,6 +98,12 @@
     <Compile Include="Luong\DSPhieuLuong.Designer.cs">
       <DependentUpon>DSPhieuLuong.cs</DependentUpon>
     </Compile>
+    <Compile Include="Luong\LapPhieuLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Luong\LapPhieuLuong.Designer.cs">
+      <DependentUpon>LapPhieuLuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Luong\PhieuLuongCaNhan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Luong\DSPhieuLuong.resx">
       <DependentUpon>DSPhieuLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Luong\LapPhieuLuong.resx">
+      <DependentUpon>LapPhieuLuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Luong\PhieuLuongCaNhan.resx">
       <DependentUpon>PhieuLuongCaNhan.cs</DependentUpon>
