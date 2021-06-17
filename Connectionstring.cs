@@ -8,7 +8,8 @@ namespace Qly_luong
 {
     class Connectionstring
     {
-        public static string connectionstring = @"Data Source=DESKTOP-7EBHGGE;Initial Catalog=QLY_LUONG;Integrated Security=True";
+        public static string connectionstring = @"Data Source=DESKTOP-NHQO2VF\MSSQLSERVER01;Initial Catalog=QLY_LUONG;Integrated Security=True";
         // Nam :@"Data Source=DESKTOP-7EBHGGE;Initial Catalog=QLY_LUONG;Integrated Security=True"
+        // vân : Data Source=DESKTOP-NHQO2VF\MSSQLSERVER01;Initial Catalog=QLY_LUONG;Integrated Security=True
     }
 }
