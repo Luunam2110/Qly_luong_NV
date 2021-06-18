@@ -100,7 +100,6 @@ namespace Qly_luong.Luong
                 DgvNhanVien.Columns["SDT"].Visible = false;
                 DgvNhanVien.Columns["diaChi"].Visible = false;
                 DgvNhanVien.Columns["gioiTinh"].Visible = false;
-                DgvNhanVien.Columns["matKhau"].Visible = false;
             }
         }
         private void DgvNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
