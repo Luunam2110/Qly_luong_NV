@@ -116,6 +116,18 @@
     <Compile Include="NhanVien\Hosocanhan.designer.cs">
       <DependentUpon>Hosocanhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanVien\ThongTincanhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\ThongTincanhan.Designer.cs">
+      <DependentUpon>ThongTincanhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien\TimNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVien\TimNhanVien.Designer.cs">
+      <DependentUpon>TimNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThuongPhat\PhatNV.cs">
@@ -180,6 +192,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhanVien\Hosocanhan.resx">
       <DependentUpon>Hosocanhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\ThongTincanhan.resx">
+      <DependentUpon>ThongTincanhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien\TimNhanVien.resx">
+      <DependentUpon>TimNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

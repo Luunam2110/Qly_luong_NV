@@ -20,7 +20,40 @@ namespace Qly_luong.NhanVien
             this.Pb = Phongban;
             InitializeComponent();
         }
+        public void Timnhanvien(string manv ,string hoten,DateTime sinhnhat,string diachi, string sdt, Boolean gioitinh,Boolean havegt, Boolean havesn)
+            {
+            DataTable table = new DataTable();
+            using (SqlCommand cmd = new SqlCommand("timnhanvien", cnn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@maNV", manv);
+                cmd.Parameters.AddWithValue("@hoten", hoten);
+                if (havesn)
+                    cmd.Parameters.AddWithValue("@birthday", sinhnhat);
+                else
+                    cmd.Parameters.AddWithValue("@birthday", DBNull.Value) ;
+                cmd.Parameters.AddWithValue("@diachi", diachi);
+                cmd.Parameters.AddWithValue("@sdt", sdt);
+                if (havegt)
+                    cmd.Parameters.AddWithValue("@gioitinh", gioitinh);
+                else
+                    cmd.Parameters.AddWithValue("@gioitinh", DBNull.Value);
+                cmd.Parameters.AddWithValue("@pb", Pb);
+                cnn.Open();
+                try
+                {
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(table);
+                    //MessageBox.Show(havegt + "  " + gioitinh + "  ");
+                }
+                //MessageBox.Show(manv + "  " + hoten + "  " + sinhnhat.ToString() + "  " + diachi + "  " +  sdt+ "   " + gioitinh);
+                
+                catch { MessageBox.Show("Đã có lỗi sảy ra !"); }
+                finally { cnn.Close(); }
+                dtgNV.DataSource = table;
 
+            }
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -228,6 +261,20 @@ namespace Qly_luong.NhanVien
             init();
             btnThem.Text = "Thêm mới";
             btnHuy.Visible = false;
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            btnThem.Text = "Thêm mới";
+            btnHuy.Visible = false;
+            init();
+            LoadDSNV();
+        }
+
+        private void btntim_Click(object sender, EventArgs e)
+        {
+            TimNhanVien f1 = new TimNhanVien(this);
+            f1.Show();
         }
     }
 }

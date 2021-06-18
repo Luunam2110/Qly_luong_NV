@@ -32,7 +32,7 @@ namespace Qly_luong
                 Item4_ThuongPhat.Visible = false;
                 Itemmenu1_Luong.Visible = false;
                 Itemmenu1_Chamcong.Visible = false;
-                ItemMenu1_NhanVien.Visible = false;
+                itemmenu_nhanvien.Visible = false;
                 Itemmenu2_Luong.Visible = false;
             }
         }
@@ -147,6 +147,13 @@ namespace Qly_luong
         private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
             NhanVien.Hosocanhan f1 = new NhanVien.Hosocanhan(PB);
+            f1.MdiParent = this;
+            f1.Show();
+        }
+
+        private void hôSơCaNhânToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            NhanVien.ThongTincanhan f1 =new  NhanVien.ThongTincanhan(maNV);
             f1.MdiParent = this;
             f1.Show();
         }
