@@ -121,6 +121,7 @@ namespace Qly_luong.ChamCong
 
         private void DSChamCong_Load(object sender, EventArgs e)
         {
+            if (!qly) groupBox2.Visible=false;
             LoadChamCongNhanVien(DateTime.Now.Month, DateTime.Now.Year,manv);
             cbbThang.Text = Convert.ToString(DateTime.Now.Month);
             txtnam.Text =Convert.ToString( DateTime.Now.Year);
